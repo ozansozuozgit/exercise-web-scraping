@@ -1,6 +1,7 @@
 const firebase = require('firebase');
+
 const firebaseConfig = {
-  apiKey: 'AIzaSyDbgqkxPFMe4YjIAglaJGKP8leo_ygVgds',
+  apiKey: process.env.apiKey,
   authDomain: 'workout-creator-29a33.firebaseapp.com',
   databaseURL: 'https://workout-creator-29a33.firebaseio.com',
   projectId: 'workout-creator-29a33',
