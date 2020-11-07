@@ -1,6 +1,7 @@
 const puppeteer = require('puppeteer');
+const pageURL = 'https://www.bodybuilding.com/exercises/finder';
 
-const webscraping = async (pageURL) => {
+const webscraping = async () => {
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
   let dataObj = {};

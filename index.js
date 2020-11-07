@@ -1,11 +1,9 @@
-const data = require('./data');
-const { pageURL } = data;
+const db = require('./firebase');
 
 const webscraping = require('./webscraping');
-const compareAndSaveResults = require('./resultAnalysis');
 
-webscraping(pageURL)
+webscraping()
   .then((dataObj) => {
-    compareAndSaveResults(dataObj);
+    db.collection('exercises').add(dataObj);
   })
   .catch(console.error);
