@@ -11,7 +11,7 @@ const webscraping = async () => {
   await page.goto(pageURL);
 
   const loadButton = '.ExLoadMore-btn';
-  for (let i = 0; i < 30; i++) {
+  for (let i = 0; i < 40; i++) {
     await page.click(loadButton);
     await page.waitForTimeout(1500);
   }
